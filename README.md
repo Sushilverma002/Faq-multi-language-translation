@@ -1,8 +1,6 @@
 # Faq-multi-language-translation
 
-# FAQ Backend Application
-
-This is a Node.js-based backend application for managing FAQs with multilingual support, WYSIWYG editor integration, and caching using Redis. The application provides a REST API to fetch and create FAQs in multiple languages.
+This is a Node.js-based backend application for managing FAQs with multilingual support, and caching using Redis. The application provides a REST API to fetch and create FAQs in multiple languages.
 
 ## **Features**
 
@@ -50,60 +48,6 @@ This is a Node.js-based backend application for managing FAQs with multilingual 
    git clone https://github.com/Sushilverma002/Faq-multi-language-translation.git
    cd Faq-multi-language-translation
 
-
-
-
-
-   # VRV-BackendDeveloper-InternTask
-   ```
-
-This repo contain implementation of RBAC Service.
-
-# **User Management API**
-
-This project implements a user management system with authentication and **Role-Based Access Control (RBAC)**. It allows user registration, login, logout, and CRUD operations. The API is built using **Node.js**, **Express.js**, and **MongoDB**.
-
----
-
-## **Features**
-
-- **User Authentication**:
-  - Secure login/logout using JWT tokens.
-  - Password hashing for enhanced security.
-- **Role-Based Access Control (RBAC)**:
-
-  - Admin, Moderator, and User roles with specific access permissions.
-  - Access control middleware to restrict routes based on roles.
-
-- **CRUD Operations**:
-
-  - Create, Read, Update, and Delete user data.
-  - Prevent password exposure in API responses.
-
-- **Token Validation**:
-  - Endpoint to validate active JWT tokens.
-
----
-
-## **Technologies Used**
-
-- **Node.js**: Backend runtime.
-- **Express.js**: Web framework.
-- **MongoDB**: NoSQL database for storing user data.
-- **Mongoose**: Object Data Modeling (ODM) for MongoDB.
-- **JWT (JSON Web Token)**: For secure authentication and token-based session management.
-
----
-
-## **Installation**
-
-To set up this project locally, follow these steps:
-
-1. **Clone the repository**:
-
-   ```bash
-   git clone https://github.com/Sushilverma002/VRV-BackendDeveloper-InternTask
-   cd VRV-BackendDeveloper-InternTask
    ```
 
 2. **Install dependencies**:
@@ -116,49 +60,28 @@ To set up this project locally, follow these steps:
    Create a `.env` file in the root of the project with the following content:
 
    ```
-   DB_URL="mongodb://localhost:27017/vrv-RBAC-microservice"
+   DB_URL="mongodb://localhost:27017/faqs-translator"
 
-   PORT=4001
-   JWT_SECRET=user-management
-   ADMIN_API_KEY= admin-only-access
+   PORT=4002
 
-   # for mail sending
-   MAILER_USER=
-   MAILER_PASS=
-   HOST=
    ```
 
 4. **Run the project**:
    ```bash
    npm start
    ```
-   The API will be available at `http://localhost:4001`.
-
----
+   The API will be available at `http://localhost:4002`.
 
 ## **API Endpoints**
 
-### **User Routes**
+### ** Routes**
 
-- **POST /signUp**: Registers a new user.
-- **POST /login**: Logs in a user and returns a JWT token.
-- **POST /logout**: Logs out the user by invalidating the JWT token.
-- **PUT /update/:id**: Updates user information (Admin-only access).
-- **DELETE /delete/:id**: Deletes a user (Admin-only access).
-- **GET /:id**: Fetches data for a single user (Admin-only access).
-- **GET /usersvalues**: Retrieves a list of user data (Admin and Moderator access).
-- **GET /validateToken**: Validates a JWT token.
+- **POST /api/v1/faq**: To create FQS.
+- **GET /api/v1/faq-all**: Fetches all the faqs in db.
+- **GET /api/v1/faq/?lang=hi**: Retrieves a list of faq's on the basis of language.
 
-## **Example Request/Response**
+## ** Post Collection**
 
-### **POST /login**
+I have added an exported Postman collection file (FAQ_Backend.postman_collection.json) in the docs folder for easy testing of the API endpoints. You can import this file into Postman to quickly get started.
 
-**Request**:
-
-```json
-{
-  "email": "user@example.com",
-  "password": "userpassword"
-  "role":"Admin"
-}
-```
+![alt text](image.png)
