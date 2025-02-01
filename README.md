@@ -80,7 +80,7 @@ This is a Node.js-based backend application for managing FAQs with multilingual 
 - **GET /api/v1/faq-all**: Fetches all the faqs in db.
 - **GET /api/v1/faq/?lang=hi**: Retrieves a list of faq's on the basis of language.
 
-## ** Post Collection**
+### Post Collection
 
 I have added an exported Postman collection file (FAQ_Backend.postman_collection.json) in the docs folder for easy testing of the API endpoints. You can import this file into Postman to quickly get started.
 
