@@ -1,0 +1,32 @@
+{
+  "name": "faq-multi-language-translation",
+  "version": "1.0.0",
+  "description": "this project is related to faq translation",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sushilverma002/Faq-multi-language-translation.git"
+  },
+  "author": "sushil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sushilverma002/Faq-multi-language-translation/issues"
+  },
+  "homepage": "https://github.com/Sushilverma002/Faq-multi-language-translation#readme",
+  "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.1",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "google-translate-api": "^2.3.0",
+    "ioredis": "^5.4.2",
+    "mongoose": "^8.9.6",
+    "nodemon": "^3.1.9",
+    "redis": "^4.7.0"
+  }
+}

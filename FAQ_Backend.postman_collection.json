@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "add811d1-4ce1-461a-bbde-dc7c8c76e04d",
+		"name": "Faqs-bharatFD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32479289"
+	},
+	"item": [
+		{
+			"name": "CREATE-FAQ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\":\"What is Node.js?\",\r\n    \"answer\":\"Node.js is a runtime environment for executing JavaScript code.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/api/v1/faq",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"api",
+						"v1",
+						"faq"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\":\"What is Node.js?\",\r\n    \"answer\":\"Node.js is a runtime environment for executing JavaScript code.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4002/api/v1/faq",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"api",
+								"v1",
+								"faq"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "78"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4e-dQfo7g+N9BxirdsS+BmKlyEdI4Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 22:31:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"OK\",\n    \"status\": true,\n    \"result\": \"faq created successfully \"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET-ALL-FAQS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4002/api/v1/faq-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"api",
+						"v1",
+						"faq-all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response of get all",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4002/api/v1/faq-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"api",
+								"v1",
+								"faq-all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1256"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4e8-K4GkSmEyl6ATjCXZ7WTHEa2VgHI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 22:33:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"OK\",\n    \"status\": true,\n    \"result\": [\n        {\n            \"translations\": {\n                \"question_hi\": \"आपका क्या नाम है?\",\n                \"answer_hi\": \"मेरा नाम सुशील वर्मा है\",\n                \"question_bn\": \"আপনার নাম কি?\",\n                \"answer_bn\": \"আমার নাম সুশীল ভার্মা\"\n            },\n            \"_id\": \"679ea0a4de67e04ac1e95641\",\n            \"question\": \"what is your name?\",\n            \"answer\": \"My name is sushil verma\",\n            \"created_at\": \"2025-02-01T22:31:00.670Z\",\n            \"updated_at\": \"2025-02-01T22:31:00.670Z\",\n            \"__v\": 0\n        },\n        {\n            \"translations\": {\n                \"question_hi\": \"Node.js क्या है?\",\n                \"answer_hi\": \"नोड.जेएस जावास्क्रिप्ट कोड को निष्पादित करने के लिए एक रनटाइम वातावरण है।\",\n                \"question_bn\": \"নোড.জেএস কী?\",\n                \"answer_bn\": \"নোড.জেএস জাভাস্ক্রিপ্ট কোড কার্যকর করার জন্য একটি রানটাইম পরিবেশ।\"\n            },\n            \"_id\": \"679ea0dede67e04ac1e95643\",\n            \"question\": \"What is Node.js?\",\n            \"answer\": \"Node.js is a runtime environment for executing JavaScript code.\",\n            \"created_at\": \"2025-02-01T22:31:58.902Z\",\n            \"updated_at\": \"2025-02-01T22:31:58.902Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET-FAQ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4002/api/v1/faq?lang=en",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"api",
+						"v1",
+						"faq"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response of filter lang faq",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4002/api/v1/faq?lang=hi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"api",
+								"v1",
+								"faq"
+							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "hi"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "435"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b3-gXUCNYNL8XeZFQ/HBNPV7lUpka8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Feb 2025 22:49:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"OK\",\n    \"status\": true,\n    \"result\": [\n        {\n            \"question\": \"आपका क्या नाम है?\",\n            \"answer\": \"मेरा नाम सुशील वर्मा है\"\n        },\n        {\n            \"question\": \"Node.js क्या है?\",\n            \"answer\": \"नोड.जेएस जावास्क्रिप्ट कोड को निष्पादित करने के लिए एक रनटाइम वातावरण है।\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
